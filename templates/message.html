@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Alert Messages
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=poppins" rel="stylesheet" rel="stylesheet">
+        <link href="{% static 'css/message.css' %}" rel="stylesheet"/>
+
+    </head>
+    <body>
+        {% if message == 'login_success'%}
+        <div class="popup" id="success" style="margin-left:30%">
+            <div class="popup-content">
+        
+                <div class="imgbox">
+                    <img src="{% static 'images/success.jpg' %}" alt="" class="img">
+                </div>
+                <div class="title">
+                    <h3>Login Success</h3>
+                </div>
+                <p class="para">Logged On To Your Account Succesfully</p>
+                
+                    <a href="home" class="button" id="s_button">Continue Shopping</a>
+              
+            </div>
+        </div>
+        {% elif message == 'login_fail'%}
+        <div class="popup" id="success"  style="margin-left:30%">
+            <div class="popup-content">
+        
+                <div class="imgbox">
+                    <img src="{% static 'images/cancel.jpg' %}" alt="" class="img">
+                </div>
+                <div class="title">
+                    <h3 style="color:red">OOp's:(</h3>
+                </div>
+                <p class="para">Login Fail Plz check Password And Credendetails</p>
+                
+                    <a href="login_index" class="button" id="s_button" style="background-color:red;font-size:150%">Retry</a>
+              
+            </div>
+        </div>
+        {% elif message == 'upload_fail'%}
+        <div class="popup" id="success"  style="margin-left:30%">
+            <div class="popup-content">
+        
+                <div class="imgbox">
+                    <img src="{% static 'images/cancel.jpg' %}" alt="" class="img">
+                </div>
+                <div class="title">
+                    <h3 style="color:red">OOp's:(</h3>
+                </div>
+                <p class="para">Failed To Upload Data</p>
+                
+                    <a href="seller_product_adding" class="button" id="s_button" style="background-color:red;font-size:150%">Retry</a>
+              
+            </div>
+        </div>
+        {% elif message == 'upload_success'%}
+        <div class="popup" id="success" style="margin-left:30%">
+            <div class="popup-content">
+        
+                <div class="imgbox">
+                    <img src="{% static 'images/success.jpg' %}" alt="" class="img">
+                </div>
+                <div class="title">
+                    <h3>Upload Success</h3>
+                </div>
+                <p class="para">Data Uploaded Succesfully</p>
+                
+                    <a href="home" class="button" id="s_button">Back To Home</a>
+              
+            </div>
+        </div>
+        {% elif message == 'registration_fail'%}
+        <div class="popup" id="success"  style="margin-left:30%">
+            <div class="popup-content">
+        
+                <div class="imgbox">
+                    <img src="{% static 'images/cancel.jpg' %}" alt="" class="img">
+                </div>
+                <div class="title">
+                    <h3 style="color:red">OOp's:(</h3>
+                </div>
+                <p class="para">Failed To Registration check password and confirm Password</p>
+                
+                    <a href="registration" class="button" id="s_button" style="background-color:red;font-size:150%">Retry</a>
+              
+            </div>
+        </div>
+        {% elif message == 'registration_success'%}
+        <div class="popup" id="success" style="margin-left:30%">
+            <div class="popup-content">
+        
+                <div class="imgbox">
+                    <img src="{% static 'images/success.jpg' %}" alt="" class="img">
+                </div>
+                <div class="title">
+                    <h3>Registration Success</h3>
+                </div>
+                <p class="para">Registered Succesfully</p>
+                
+                    <a href="login_index" class="button" id="s_button">Go to Login page</a>
+              
+            </div>
+        </div>
+        {% elif message == 'set_success'%}
+        <div class="popup" id="success" style="margin-left:30%">
+            <div class="popup-content">
+        
+                <div class="imgbox">
+                    <img src="{% static 'images/success.jpg' %}" alt="" class="img">
+                </div>
+                <div class="title">
+                    <h3>password Changed Success</h3>
+                </div>
+                <p class="para">password changed</p>
+                
+                    <a href="login_index" class="button" id="s_button">Go to Login page</a>
+              
+            </div>
+        </div>
+        {% elif message == 'fail_to_set_new_password' %}
+        <div class="popup" id="success"  style="margin-left:30%">
+            <div class="popup-content">
+        
+                <div class="imgbox">
+                    <img src="{% static 'images/cancel.jpg' %}" alt="" class="img">
+                </div>
+                <div class="title">
+                    <h3 style="color:red">OOp's:(</h3>
+                </div>
+                <p class="para">password And Confirm Password Not Matching</p>
+                
+                    <a href="forgot_password" class="button" id="s_button" style="background-color:red;font-size:150%">Retry</a>
+              
+            </div>
+        </div>
+        {% else %}
+        <div class="popup" id="success"  style="margin-left:30%">
+            <div class="popup-content">
+        
+                <div class="imgbox">
+                    <img src="{% static 'images/cancel.jpg' %}" alt="" class="img">
+                </div>
+                <div class="title">
+                    <h3 style="color:red">OOp's:(</h3>
+                </div>
+                <p class="para">No messages Yet</p>
+                
+                    <a href="home" class="button" id="s_button" style="background-color:red;font-size:150%">Retry</a>
+              
+            </div>
+        </div>
+       
+         {% endif %}
+    </body>
+
+</html>

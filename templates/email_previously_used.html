@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Alert Messages
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=poppins" rel="stylesheet" rel="stylesheet">
+        <link href="{% static 'css/message.css'%}" rel="stylesheet"/>
+
+    </head>
+    <body>
+        <div class="popup" id="success"  style="margin-left:30%">
+            <div class="popup-content">
+        
+                <div class="imgbox">
+                    <img src="{% static 'images/cancel.jpg' %}" alt="" class="img">
+                </div>
+                <div class="title">
+                    <h3 style="color:red">OOp's:(</h3>
+                </div>
+                <p class="para">This email is previously used try with another email id</p>
+                
+                    <a href="registration" class="button" id="s_button" style="background-color:red;font-size:150%">Retry</a>
+              
+            </div>
+        </div>
+        
+    </body>
+</html>
